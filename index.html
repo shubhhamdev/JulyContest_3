@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Market Data</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="homepage" id="home">Cryptocurrency Market Data</h1>
+    <div class="navbar-links">
+      <a href="#searchbar" class="navbar-option home">Home</a>
+    </div>
+  </nav>
+  <div class="search-sort" id="searchbar">
+    <input type="text" id="searchInput" placeholder="Cryptocurrency...">
+    <button onclick="searchData()">Search</button>
+  </div>
+  <div class="sort">
+    <button onclick="switchView('grid')">Grid View</button>
+    <button onclick="switchView('list')">List View</button>
+  </div>
+  <div class="grid-view" id="gridView"> 
+  </div>
+  <table class="list-view" id="listView">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Current Price in USD</th>
+        <th>Total Volume</th>
+        <th>Market Cap</th>
+        <th>Percentage Change (24h)</th>
+      </tr>
+    </thead>
+    <tbody id="cryptoTableBody">
+    </tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+</html>
